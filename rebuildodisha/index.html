@@ -56,7 +56,21 @@
     white-space:nowrap;
     margin-right: 1000px; 
     } 
-</style> 
+	</style>
+	<script>
+	function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+    $('.modal:visible').each(centerModal);
+});
+</script> 
 
   <!-- =======================================================
     Theme Name: Rapid
@@ -276,10 +290,10 @@ That is the transformation that Odisha has had and I thank the four and half cro
               <div class="icon" ><img src="img/Others.png" alt="" class="img-fluid"></div>
               <h4 class="title"><a href="">Others</a></h4>
               <!-- <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p> -->
-			   <i class="ion-android-checkmark-circle"></i> <a href="#services" onclick="alert('Please open its app');"><b>PhonePe</b></a><br>
-			  	
+			   <i class="ion-android-checkmark-circle"></i> <a href="#services" data-toggle="modal" data-target="#myphonepe"><b>PhonePe</b></a><br>
+ 
 
-                 <i class="ion-android-checkmark-circle"></i> <a href="#services" onclick="alert('Please open its app');"><b>Google Pay</b></a><br>
+                 <i class="ion-android-checkmark-circle"></i> <a href="#services" data-toggle="modal" data-target="#mygooglepay"><b>Google Pay</b></a><br>
 				<i class="ion-android-checkmark-circle"></i> <a href="https://www.facebook.com/donate/644080039373512/?fundraiser_source=external_url" target="_blank" rel="noopener noreferrer" >FB Fundraiser-Abroad</a></h4>
             </div>
           </div>
@@ -292,6 +306,55 @@ That is the transformation that Odisha has had and I thank the four and half cro
               <p class="description">Flipkart collaborated with Goonj NGO to provide necessary items to the people affected. You will be redirected to Razor Pay gateway for Goonj through Flipkart</p>
             </div>
           </div>
+		  
+		   <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <!-- <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div> -->
+			  <div class="icon" ><img src="img/ola.png" alt="" class="img-fluid"></div>
+              <h4 class="title"><a href="#services" data-toggle="modal" data-target="#myModal">OlaCabs</a></h4>
+              <p class="description">OlaCabs are giving an option to donate Rs 5 on every ride which will be contributed to CMRF.</p>
+            </div>
+          </div>
+		  
+		   <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" ><img src="img/homvery.png" alt="" class="img-fluid"></div>
+              <h4 class="title"><a href="https://www.homvery.com/app" target="_blank" rel="noopener noreferrer" >Homvery</a></h4>
+              <p class="description">Homvery joined the cause, it will be contributing 5% of Profit earned per order till 31st May 2019
+			   </p>
+            </div>
+          </div>
+			
+			
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img src="img/olascreenshot.png" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="myphonepe" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img src="img/phonepescreenshot.png" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="mygooglepay" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img src="img/gpayscreenshot.png" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
 
         </div>
 
