@@ -56,7 +56,21 @@
     white-space:nowrap;
     margin-right: 1000px; 
     } 
-</style> 
+	</style>
+	<script>
+	function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+    $('.modal:visible').each(centerModal);
+});
+</script> 
 
   <!-- =======================================================
     Theme Name: Rapid
@@ -84,7 +98,8 @@
 Central Govt 1000 Crores INR <span> </span>Dalai Lama contributed 10 Lakh INR<span> 
 </span> Gujarat Govt 5 Crores INR<span> </span> Uttar Pradesh Govt 10 Crores INR <span> </span>Andhra Pradesh Govt 15 Crores INR <span>
  </span>Chattisgarh Govt 11 Crores INR <span> </span>Tamil Nadu Govt 10 Crores INR <span> </span>Maharastra Govt 10 Crores INR 
- <span> </span>Akshay Kumar contributed 1 Crore INR</marquee>
+ <span> </span>Akshay Kumar contributed 1 Crore INR <span> </span> Adani Ports &amp; SEZ contributed 25 Crore INR each <span> </span>ICICI contributed 10 Crore INR
+<span> </span>Bank of India contributed 25 Lakh INR <span> </span>Equipage Infracore employees contributed their day's salary</marquee>
 		 
       </div>
     </div>
@@ -275,10 +290,10 @@ That is the transformation that Odisha has had and I thank the four and half cro
               <div class="icon" ><img src="img/Others.png" alt="" class="img-fluid"></div>
               <h4 class="title"><a href="">Others</a></h4>
               <!-- <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p> -->
-			   <i class="ion-android-checkmark-circle"></i> <a href="#services" onclick="alert('Please open its app');"><b>PhonePe</b></a><br>
-			  	
+			   <i class="ion-android-checkmark-circle"></i> <a href="#services" data-toggle="modal" data-target="#myphonepe"><b>PhonePe</b></a><br>
+ 
 
-                 <i class="ion-android-checkmark-circle"></i> <a href="#services" onclick="alert('Please open its app');"><b>Google Pay</b></a><br>
+                 <i class="ion-android-checkmark-circle"></i> <a href="#services" data-toggle="modal" data-target="#mygooglepay"><b>Google Pay</b></a><br>
 				<i class="ion-android-checkmark-circle"></i> <a href="https://www.facebook.com/donate/644080039373512/?fundraiser_source=external_url" target="_blank" rel="noopener noreferrer" >FB Fundraiser-Abroad</a></h4>
             </div>
           </div>
@@ -291,6 +306,46 @@ That is the transformation that Odisha has had and I thank the four and half cro
               <p class="description">Flipkart collaborated with Goonj NGO to provide necessary items to the people affected. You will be redirected to Razor Pay gateway for Goonj through Flipkart</p>
             </div>
           </div>
+		  
+		   <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <!-- <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div> -->
+			  <div class="icon" ><img src="img/ola.png" alt="" class="img-fluid"></div>
+              <h4 class="title"><a href="#services" data-toggle="modal" data-target="#myModal">OlaCabs</a></h4>
+              <p class="description">OlaCabs are giving an option to donate Rs 5 on every ride which will be contributed to CMRF.</p>
+            </div>
+          </div>
+			
+			
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img src="img/olascreenshot.png" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="myphonepe" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img src="img/phonepescreenshot.png" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="mygooglepay" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img src="img/gpayscreenshot.png" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
 
         </div>
 
@@ -960,6 +1015,7 @@ That is the transformation that Odisha has had and I thank the four and half cro
                     <p>Special Relief Commissioner, Odisha</p>
 					             
                 <i class="ion-android-checkmark-circle"></i> <a href="https://m.facebook.com/story.php?story_fbid=687391445007582&id=314103725669691" target="_blank">6th May 2019 3PM IST</a> <br>
+		<i class="ion-android-checkmark-circle"></i> <a href="https://www.facebook.com/314103725669691/posts/687980151615378/" target="_blank">7th May 2019 2:30PM IST</a> <br>			  
               <!--  <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
                 <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
               -->
@@ -1036,6 +1092,10 @@ That is the transformation that Odisha has had and I thank the four and half cro
 				<i class="ion-android-checkmark-circle"></i> <a href="https://www.google.co.in/amp/s/indianexpress.com/article/india/cyclone-fani-news-contribution-of-states-to-odisha-5711627/lite/" target="_blank">Tamil Nadu Govt 10 Crores INR</a> <br>
                 <i class="ion-android-checkmark-circle"></i> <a href="https://www.google.co.in/amp/s/indianexpress.com/article/india/cyclone-fani-news-contribution-of-states-to-odisha-5711627/lite/" target="_blank">Maharastra Govt 10 Crores INR</a> <br>
 				<i class="ion-android-checkmark-circle"></i> <a href="https://www.facebook.com/587905641230609/posts/2302952016392621/" target="_blank">Akshay Kumar contributed 1 Crore INR</a> <br>
+				<i class="ion-android-checkmark-circle"></i> <a href="https://m.facebook.com/story.php?story_fbid=901324260206563&id=214515285554134" target="_blank">Adani Ports &amp; SEZ contributed 25 Crore INR each</a> <br>
+				<i class="ion-android-checkmark-circle"></i> <a href="https://m.facebook.com/story.php?story_fbid=901324260206563&id=214515285554134" target="_blank">ICICI contributed 10 Crore INR</a> <br>
+				<i class="ion-android-checkmark-circle"></i> <a href="https://m.facebook.com/story.php?story_fbid=901324260206563&id=214515285554134" target="_blank">Bank of India contributed 25 Lakh INR</a> <br>
+				<i class="ion-android-checkmark-circle"></i> <a href="https://m.facebook.com/story.php?story_fbid=901324260206563&id=214515285554134" target="_blank">Equipage Infracore employees contributed their day's salary</a> <br>
               </ul> 
 			  
 		
